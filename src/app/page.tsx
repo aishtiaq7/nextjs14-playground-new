@@ -1,4 +1,7 @@
+import { LandingPage } from "@/components/landing-page";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import { Spotlight } from "@/components/ui/spotlight";
+import { WavyBackground } from "@/components/ui/wavy-background";
 
 export default function Home() {
   const items = [
@@ -47,8 +50,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex justify-center items-center h-screen w-screen">
-      <AnimatedTooltip items={items} />
+    <div className="">
+      <LandingPage/>
+      {/* <AnimatedTooltip items={items} /> */}
+      {/* <Spotlight className="spotLightClass" fill="#0000FF"/> */}
+      {/* <WavyBackground/> */}
+      {/* <section className="section2"></section> */}
     </div>
   );
 }
