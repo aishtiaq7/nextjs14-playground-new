@@ -1,0 +1,53 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .loading05 {
+    perspective: 1000px;
+    font-size: 84px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.2em; /* Add more spacing between letters */
+  }
+  
+  .loading05 span {
+    display: inline-block;
+    transform-origin: 50% 50% -25px;
+    transform-style: preserve-3d;
+    animation: loading05 1.6s infinite;
+  }
+  
+  /* Staggered animation delay for each character */
+  .loading05 span:nth-child(2) { animation-delay: 0.1s; }
+  .loading05 span:nth-child(3) { animation-delay: 0.2s; }
+  .loading05 span:nth-child(4) { animation-delay: 0.3s; }
+  .loading05 span:nth-child(5) { animation-delay: 0.4s; }
+  .loading05 span:nth-child(6) { animation-delay: 0.5s; }
+  .loading05 span:nth-child(7) { animation-delay: 0.6s; }
+  .loading05 span:nth-child(8) { animation-delay: 0.7s; }
+  .loading05 span:nth-child(9) { animation-delay: 0.8s; }
+  
+  /* Define the animation keyframes */
+  @keyframes loading05 {
+    0% {
+      transform: rotateX(-360deg);
+    }
+    70% {
+      transform: rotateX(0);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+  
