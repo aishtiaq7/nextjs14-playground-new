@@ -3,18 +3,18 @@
     height: 100vh;
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2rem;
+    /* font-size: 1rem; */
     cursor: pointer;
   }
   
   .loading05 {
     perspective: 1000px;
-    font-size: 84px;
+    font-size: 2rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     text-align: center;
@@ -25,7 +25,7 @@
     display: inline-block;
     transform-origin: 50% 50% -25px;
     transform-style: preserve-3d;
-    animation: loading05 1.6s infinite;
+    animation: loading05 2.5s infinite;
   }
   
   /* Staggered animation delay for each character */

@@ -11,16 +11,16 @@ export function LandingPage() {
   const [showOverlay, setShowOverlay] = useState(true); // Overlay state
   const audioRef: any = useRef(null); // Ref for audio element
 
-  const toggleVideo = () => {
-    const video = document.getElementById("hero-video") as HTMLVideoElement;
-    if (video.paused) {
-      video.play();
-      setIsPlaying(true);
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  };
+  // const toggleVideo = () => {
+  //   const video = document.getElementById("hero-video") as HTMLVideoElement;
+  //   if (video.paused) {
+  //     video.play();
+  //     setIsPlaying(true);
+  //   } else {
+  //     video.pause();
+  //     setIsPlaying(false);
+  //   }
+  // };
 
   // Function to handle "Click to Continue" overlay
   const handleOverlayClick = () => {
@@ -29,14 +29,14 @@ export function LandingPage() {
     video.play();
     setIsPlaying(true);
 
-    // Play the audio
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
+    // // Play the audio
+    // if (audioRef.current) {
+    //   audioRef.current.play();
+    // }
   };
 
   return (
-    <div className="flex flex-col min-h-screen relative">
+    <div className="flex flex-col min-h-screen relative" lang="en">
       {/* Full-Screen Overlay */}
       {showOverlay && (
         <div className="overlay" onClick={handleOverlayClick}>
@@ -46,10 +46,10 @@ export function LandingPage() {
             <span>i</span>
             <span>c</span>
             <span>k</span>
-            <span> </span>
+            <span style={{ margin: "0 0.8rem" }}> </span>
             <span>t</span>
             <span>o</span>
-            <span> </span>
+            <span style={{ margin: "0 0.8rem" }}> </span>
             <span>C</span>
             <span>o</span>
             <span>n</span>
@@ -68,7 +68,6 @@ export function LandingPage() {
           id="hero-video"
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
-          // muted
           loop
           playsInline
         >
@@ -81,9 +80,8 @@ export function LandingPage() {
               Give me an idea,
             </h1>
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              And I'll build it here!
+              And I will build it!
             </h1>
-            {/* <p className="text-xl md:text-2xl mb-8">awshafishtiaque@gmail.com</p> */}
             <p className="text-xl md:text-2xl mb-8">
               <a
                 href="mailto:awshafishtiaque@gmail.com"
@@ -95,9 +93,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Audio Element */}
-      <audio ref={audioRef} src="/path-to-your-audio-file.mp3" />
     </div>
   );
 }
