@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+// import { Input } from "@/components/ui/input"
+// import { Textarea } from "@/components/ui/textarea"
 import { PlayCircle, Pause } from 'lucide-react'
 
 export function LandingPage() {
@@ -33,27 +33,27 @@ export function LandingPage() {
           loop
           playsInline
         >
-          {/* <source src="placeholder.mp4" type="video/mp4" /> */}
           <source src="new4k.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Site</h1>
-            <p className="text-xl md:text-2xl mb-8">Discover amazing experiences</p>
-            <Button 
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Give me an idea,</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">And I'll build it here!</h1>
+            <p className="text-xl md:text-2xl mb-8">awshafishtiaque@gmail.com</p>
+            {/* <Button 
               onClick={toggleVideo}
               className="text-lg px-6 py-3"
             >
               {isPlaying ? <Pause className="mr-2" /> : <PlayCircle className="mr-2" />}
               {isPlaying ? 'Pause' : 'Play'} Video
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-gray-100">
+      {/* <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">About Us</h2>
           <div className="max-w-3xl mx-auto">
@@ -67,10 +67,10 @@ export function LandingPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Contact Us</h2>
           <form className="max-w-md mx-auto space-y-4">
@@ -80,10 +80,10 @@ export function LandingPage() {
             <Button type="submit" className="w-full">Send Message</Button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
+      {/* <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -111,7 +111,9 @@ export function LandingPage() {
             <p>&copy; 2023 Company Name. All rights reserved.</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
+
+      
     </div>
   )
 }
