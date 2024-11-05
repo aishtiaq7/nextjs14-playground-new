@@ -40,16 +40,16 @@ export function LandingPage() {
       {/* Full-Screen Overlay */}
       {showOverlay && (
         <div className="overlay" onClick={handleOverlayClick}>
-          <div className="loading05">
+          <div className="">
             <span>C</span>
             <span>l</span>
             <span>i</span>
             <span>c</span>
             <span>k</span>
-            <span style={{ margin: "0 0.8rem" }}> </span>
+            <span> </span>
             <span>t</span>
             <span>o</span>
-            <span style={{ margin: "0 0.8rem" }}> </span>
+            <span> </span>
             <span>C</span>
             <span>o</span>
             <span>n</span>
