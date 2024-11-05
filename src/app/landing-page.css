@@ -70,12 +70,13 @@
 .glow-button {
   padding: 0.5rem 2rem;
   border-radius: 12px;
-  border: 1px solid white;
-  background: linear-gradient(253deg, #f7f7f7, #7a00b8);
+  border: 2px solid black;
+  background: linear-gradient(253deg,#a58105,#bd9b15,#ddb639,#ffdf01,#ffcc01,#a8eb12);
   background-size: 120% 120%;
   animation: gradient-animation 3s ease infinite;
   transition: transform 1s ease;
   cursor: pointer;
+  color: black
 }
 
 .glow-button:hover {
