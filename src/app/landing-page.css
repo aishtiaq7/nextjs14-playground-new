@@ -1,52 +1,103 @@
+/*
+     REF: https://animated-gradient-background-generator.netlify.app/
+ */
+/* Landing Page Container */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Overlay */
 .overlay {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    inset: 0;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-content {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-email {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.email-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.glow-button {
+  padding: 0.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid white;
+  background: linear-gradient(253deg, #f7f7f7, #7a00b8);
+  background-size: 120% 120%;
+  animation: gradient-animation 3s ease infinite;
+  transition: transform 1s ease;
+  cursor: pointer;
+}
+
+.glow-button:hover {
+  transform: scale(1.2);
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .loading05 {
-    perspective: 1000px;
-    font-size: 1rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    text-align: center;
-    letter-spacing: 0.2em; /* Add more spacing between letters */
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .loading05 span {
-    display: inline-block;
-    transform-origin: 50% 50% -25px;
-    transform-style: preserve-3d;
-    animation: loading05 2.5s infinite;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  /* Staggered animation delay for each character */
-  .loading05 span:nth-child(2) { animation-delay: 0.1s; }
-  .loading05 span:nth-child(3) { animation-delay: 0.2s; }
-  .loading05 span:nth-child(4) { animation-delay: 0.3s; }
-  .loading05 span:nth-child(5) { animation-delay: 0.4s; }
-  .loading05 span:nth-child(6) { animation-delay: 0.5s; }
-  .loading05 span:nth-child(7) { animation-delay: 0.6s; }
-  .loading05 span:nth-child(8) { animation-delay: 0.7s; }
-  .loading05 span:nth-child(9) { animation-delay: 0.8s; }
-  
-  /* Define the animation keyframes */
-  @keyframes loading05 {
-    0% {
-      transform: rotateX(-360deg);
-    }
-    70% {
-      transform: rotateX(0);
-    }
-    100% {
-      transform: rotateX(360deg);
-    }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
   }
-  
+}
