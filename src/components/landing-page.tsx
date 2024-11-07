@@ -34,18 +34,13 @@ export function LandingPage() {
         </video>
 
         <div className="overlay-content">
-          <div className="text-center">
+          <div className="contentInContainer">
             <h1 className="hero-title">
               If you can visualize it, you can bring it to life.
             </h1>
-            {/* <p className="hero-email">
-              <a href="mailto:awshafishtiaque@gmail.com" className="email-link">
-                awshafishtiaque@gmail.com
-              </a>
-            </p> */}
             <button className="glow-button" onClick={handleButtonClick}>
               Go back
-            </button>
+            </button>{" "}
           </div>
         </div>
       </section>
