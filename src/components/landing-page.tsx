@@ -6,6 +6,7 @@ import "@/app/landing-page.css";
 export function LandingPage() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showOverlay, setShowOverlay] = useState(true);
+  const [fadeIn, setFadeIn] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleOverlayClick = () => {
@@ -13,6 +14,10 @@ export function LandingPage() {
     const video = document.getElementById("hero-video") as HTMLVideoElement;
     video.play();
     setIsPlaying(true);
+    
+    setTimeout(() => {
+      setFadeIn(true);
+    }, 500);
   };
 
   const handleButtonClick = () => {
@@ -33,7 +38,7 @@ export function LandingPage() {
           Your browser does not support the video tag.
         </video>
 
-        <div className="overlay-content">
+        <div className={`overlay-content ${fadeIn ? 'fade-in' : ''}`}>
           <div className="contentInContainer">
             <h1 className="hero-title">
               If you can visualize it, you can bring it to life.

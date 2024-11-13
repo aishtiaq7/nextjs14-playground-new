@@ -75,6 +75,11 @@
   align-items: center;
   justify-content: center;
   color: white;
+  transition: background-color 4s ease;
+}
+
+.overlay-content.fade-in {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .text-center {
