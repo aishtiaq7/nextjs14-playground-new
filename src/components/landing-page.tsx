@@ -33,7 +33,12 @@ export function LandingPage() {
       )}
 
       <section className={`hero-section ${showOverlay ? "hidden" : ""}`}>
-        <video id="hero-video" className="hero-video" loop playsInline>
+        <video 
+          id="hero-video" 
+          className={`hero-video ${fadeIn ? 'fade-in' : ''}`} 
+          loop 
+          playsInline
+        >
           <source src="musicWithSound.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

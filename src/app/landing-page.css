@@ -38,7 +38,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(0.5);
+  transition: filter 5s ease;
 }
+
+.hero-video.fade-in {
+  filter: saturate(1.2);
+}
+
 .contentInContainer {
   border: 1px solid red;
 
@@ -106,12 +113,21 @@
   padding: 0.5rem 2rem;
   border-radius: 12px;
   border: 2px solid black;
-  background: linear-gradient(253deg,#a58105,#bd9b15,#ddb639,#ffdf01,#ffcc01,#a8eb12);
-  background-size: 120% 120%;
-  animation: gradient-animation 3s ease infinite;
+  background: linear-gradient(
+    253deg,
+    #ff6b6b,    /* Red */
+    #4ecdc4,    /* Teal */
+    #45b7d1,    /* Light Blue */
+    #96e6a1,    /* Light Green */
+    #ffd93d,    /* Yellow */
+    #ff6b6b     /* Back to first color for smooth loop */
+  );
+  background-size: 300% 300%;  /* Increased size for more dramatic effect */
+  animation: gradient-animation 8s ease infinite;  /* Slowed down animation */
   transition: transform 1s ease;
   cursor: pointer;
-  color: black
+  color: black;
+  font-weight: 600;
 }
 
 .glow-button:hover {
